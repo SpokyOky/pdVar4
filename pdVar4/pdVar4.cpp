@@ -6,30 +6,71 @@ using namespace std;
 
 int main()
 {
-    cout << "0 - new obj(email)\n1 - obj.ToString()\n";
-
-    Email newEmail("nasa", "mail.ru");
-    while (1) 
+    while (1)
     {
-        int i;
-        cin >> i;
-        switch (i) 
+        cout << "Input task number (1-6)\n";
+        int task;
+        cin >> task;
+        switch (task)
         {
-        case 0:
-        {
-            cout << "Input body(nasa) and domen(mail.ru) of email\n";
-            string n, d;
-            cin >> n >> d;
-            newEmail = Email(n, d);
-        }break;
         case 1:
         {
-            cout << "ToString(): " << newEmail.ToString() << "\n";
+            cout << "0 - new obj(email)\n1 - obj.ToString()\n2 - set name\n3 - set domen\n9 - back\n";
+
+            Email newEmail("nasa", "mail.ru");
+            while (1)
+            {
+                int i;
+                cin >> i;
+                bool f = false;
+                switch (i)
+                {
+                case 0:
+                {
+                    cout << "Input name(nasa) and domen(mail.ru) of email\n";
+                    string n, d;
+                    cin >> n >> d;
+                    newEmail = Email(n, d);
+                }break;
+                case 1:
+                {
+                    cout << "ToString(): " << newEmail.ToString() << "\n";
+                }break;
+                case 2:
+                {
+                    cout << "Input name of email\n";
+                    string n;
+                    cin >> n;
+                    newEmail.setName(n);
+                }break;
+                case 3:
+                {
+                    cout << "Input domen of email\n";
+                    string d;
+                    cin >> d;
+                    newEmail.setDomen(d);
+                }break;
+                case 9:
+                {
+                    f = true;
+                }
+                default:
+                {
+                    cout << "Incorrect\n";
+                }
+                }
+                if (f)
+                {
+                    break;
+                }
+            }
+        }break;
+        case 2:
+        {
+
         }break;
         default:
-        {
             cout << "Incorrect\n";
-        }
         }
     }
 }

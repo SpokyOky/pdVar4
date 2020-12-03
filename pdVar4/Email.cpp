@@ -7,6 +7,18 @@ Email::Email(string name, string domen)
     cout << this->ToString() << " is created\n";
 }
 
+void Email::setName(string name) 
+{
+    this->name = name;
+    cout << "Name " << name << " set";
+}
+
+void Email::setDomen(string domen) 
+{
+    this->domen = domen;
+    cout << "Domen " << domen << " set";
+}
+
 Email::~Email(void) {
     cout << this->ToString() << " is destructed\n";
 }
