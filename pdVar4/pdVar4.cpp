@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <cstring>
 #include "Email.h"
+#include "SymbString.h"
+#include "OctString.h"
 
 using namespace std;
 
@@ -67,7 +69,16 @@ int main()
         }break;
         case 2:
         {
-
+            SymbString newSS("symbstr");
+            cout << newSS.getStr() << "\n";
+            newSS.setStr("asasd");
+            cout << newSS.getStr() << "\n";
+            OctString newOS("8");
+            cout << newOS.getStr() << "\n";
+            OctString newOS2("7");
+            cout << newOS2.getStr() << "\n";
+            OctString newSum = newOS + newOS2;
+            cout << newSum.getStr() << "\n";
         }break;
         default:
             cout << "Incorrect\n";

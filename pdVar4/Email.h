@@ -7,10 +7,10 @@ using namespace std;
 class Email
 {
 public:
-    Email(string name, string domen);
+    Email(string, string);
 
-    void setName(string name);
-    void setDomen(string domen);
+    void setName(string);
+    void setDomen(string);
 
     string ToString();
 
