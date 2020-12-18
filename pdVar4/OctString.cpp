@@ -5,14 +5,14 @@ OctString::OctString(string str) : SymbString(str)
 	setStr(str);
 }
 
-//atoi - string to int; itoa - int to string(10 - decimal, 8 - octal)
+//atoi - string to int; itoa - int to string(10 - decimal, 8 - octal)(деситичная, восьмиричная)
 
 void OctString::setStr(string str)
 {
 	try
 	{
 		char buffer[33];
-		_itoa(atoi(str.c_str()), buffer, 10);
+		_itoa(atoi(str.c_str()), buffer, 10);//
 		SymbString::setStr(buffer);
 	}
 	catch (exception& e)
@@ -37,7 +37,7 @@ OctString OctString::operator+(OctString& str)
 	return OctString(buffer);
 }
 
-int OctString::otoi(int oct) //octal to decimal
+int OctString::otoi(int oct) //octal to decimal(из 8 в 10)
 {
 	int dig, num = 0, i = 0;
 	while (oct != 0)

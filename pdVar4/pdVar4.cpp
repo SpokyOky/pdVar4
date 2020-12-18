@@ -33,7 +33,7 @@ int main()
 {
     while (1)
     {
-        cout << "Input task number (1-6)\n";
+        cout << "VVOD nomer (1-6)\n";
         int task;
         cin >> task;
         switch (task)
@@ -52,7 +52,7 @@ int main()
                 {
                 case 0:
                 {
-                    cout << "Input name(nasa) and domen(mail.ru) of email\n";
+                    cout << "Vvod name(nasa) and domen(mail.ru) of email\n";
                     string n, d;
                     cin >> n >> d;
                     newEmail = Email(n, d);
@@ -63,14 +63,14 @@ int main()
                 }break;
                 case 2:
                 {
-                    cout << "Input name of email\n";
+                    cout << "Vvod name of email\n";
                     string n;
                     cin >> n;
                     newEmail.setName(n);
                 }break;
                 case 3:
                 {
-                    cout << "Input domen of email\n";
+                    cout << "Vvod domen of email\n";
                     string d;
                     cin >> d;
                     newEmail.setDomen(d);
@@ -95,7 +95,7 @@ int main()
             cout << "0 - new symbStr(value)\n1 - symbStr.getStr()\n2 - symbStr.setStr(value)\n3 - new octStr(value)\n4 - octStr.getStr()\n5 - octStr.setStr(value)\n\n9 - back\n";
 
             bool f = false;
-            SymbString newSS("symbstr");
+            SymbString newSS("symbstr"); //
             OctString newOS("8");
             while (1)
             {
@@ -103,26 +103,26 @@ int main()
                 cin >> i;
                 switch (i)
                 {
-                case 0:
+                case 0://ввод новой строки
                 {
                     string s;
                     cin >> s;
                     newSS = SymbString(s);
                 }
                 break;
-                case 1:
+                case 1:// вывод строки
                 {
                     cout << newSS.getStr() + "\n";
                 }
                 break;
-                case 2:
+                case 2:// замена значений
                 {
                     string s;
                     cin >> s;
                     newSS.setStr(s);
                 }
                 break;
-                case 3:
+                case 3://
                 {
                     string s;
                     cin >> s;
