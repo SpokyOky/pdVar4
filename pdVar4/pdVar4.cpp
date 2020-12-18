@@ -92,7 +92,7 @@ int main()
         }break;
         case 2:
         {
-            cout << "0 - new symbStr(value)\n1 - symbStr.getStr()\n2 - symbStr.setStr(value)\n3 - new octStr(value)\n4 - octStr.getStr()\n5 - octStr.setStr(value)\n\n9 - back\n";
+            cout << "0 - new symbStr(value)\n1 - symbStr.getStr()\n2 - symbStr.setStr(value)\n3 - new octStr(value)\n4 - octStr.getStr()\n5 - octStr.setStr(value)\n6 -  + SymbString \n7 -  + OctString\n\n9 - back\n";
 
             bool f = false;
             SymbString newSS("symbstr");
@@ -140,6 +140,20 @@ int main()
                     cin >> s;
                     newOS.setStr(s);
                 }
+                case 6:
+                {
+                    string s;
+                    cin >> s;
+                    SymbString a(s);
+                    cout << (newSS + a).getStr() << "\n";
+                }
+                case 7:
+                {
+                    string s;
+                    cin >> s;
+                    OctString a(s);
+                    cout << (newOS + a).getStr() << "\n";
+                }
                 break;
                 case 9:
                 {
@@ -147,6 +161,7 @@ int main()
                 }
                 break;
                 default:
+                    cout << "Неверно\n";
                     break;
                 }
                 if (f)
@@ -190,6 +205,7 @@ int main()
                 }
                 break;
                 default:
+                    cout << "Неверно\n";
                     break;
                 }
                 if (f)

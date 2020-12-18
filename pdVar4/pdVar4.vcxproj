@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AEROFLOT.cpp" />
     <ClCompile Include="Email.cpp" />
     <ClCompile Include="OctString.cpp" />
     <ClCompile Include="pdVar4.cpp" />
     <ClCompile Include="SymbString.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AEROFLOT.h" />
     <ClInclude Include="Email.h" />
     <ClInclude Include="OctString.h" />
     <ClInclude Include="vStack.h" />

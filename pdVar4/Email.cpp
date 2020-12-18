@@ -10,13 +10,13 @@ Email::Email(string name, string domen)
 void Email::setName(string name) 
 {
     this->name = name;
-    cout << "Name " << name << " set";
+    cout << "Name " << name << " set\n";
 }
 
 void Email::setDomen(string domen) 
 {
     this->domen = domen;
-    cout << "Domen " << domen << " set";
+    cout << "Domen " << domen << " set\n";
 }
 
 Email::~Email(void) {
