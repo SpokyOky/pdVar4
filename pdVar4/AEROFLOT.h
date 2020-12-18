@@ -11,10 +11,8 @@ public:
 	int flightNumber;
 	string planeType;
 
-	AEROFLOT();
-
 	AEROFLOT(string destination, int flightNumber, string planeType);
 
 	friend istream& operator >>(istream&, AEROFLOT&);
-	friend istream& operator <<(istream&, AEROFLOT&);
+	friend ostream& operator <<(ostream&, AEROFLOT&);
 };

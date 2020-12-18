@@ -3,6 +3,7 @@
 #include "Email.h"
 #include "SymbString.h"
 #include "OctString.h"
+#include "AEROFLOT.h"
 #include <vector>
 
 template <class T>
@@ -31,6 +32,7 @@ public:
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     while (1)
     {
         cout << "VVOD nomer (1-6)\n";
@@ -197,6 +199,43 @@ int main()
                 case 2:
                 {
                     stack.pop();
+                }
+                break;
+                case 9:
+                {
+                    f = true;
+                }
+                break;
+                default:
+                    cout << "Неверно\n";
+                    break;
+                }
+                if (f)
+                {
+                    break;
+                }
+            }
+        }
+        case 4:
+        {
+            cout << "0 - cin >>\n1 - cout <<\n\n9 - back\n";
+
+            bool f = false;
+            AEROFLOT aeroflot("London", 1, "Passanger");
+            while (1)
+            {
+                int i;
+                cin >> i;
+                switch (i)
+                {
+                case 0:
+                {
+                    cin >> aeroflot;
+                }
+                break;
+                case 1:
+                {
+                    cout << aeroflot << "\n";
                 }
                 break;
                 case 9:
