@@ -47,7 +47,7 @@ int main()
             {
                 int i;
                 cin >> i;
-                bool f = false;
+                bool f = false;//логич тип данных
                 switch (i)
                 {
                 case 0:
