@@ -139,19 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Action.cpp" />
     <ClCompile Include="Email.cpp" />
-    <ClCompile Include="Factory.cpp" />
     <ClCompile Include="OctString.cpp" />
     <ClCompile Include="pdVar4.cpp" />
     <ClCompile Include="SymbString.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Action.h" />
-    <ClInclude Include="AString.h" />
     <ClInclude Include="Email.h" />
-    <ClInclude Include="Factory.h" />
     <ClInclude Include="OctString.h" />
+    <ClInclude Include="vStack.h" />
     <ClInclude Include="SymbString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -3,8 +3,31 @@
 #include "Email.h"
 #include "SymbString.h"
 #include "OctString.h"
+#include <vector>
 
-using namespace std;
+template <class T>
+class vStack
+{
+private:
+    vector<T> v;
+public:
+    vStack()
+    {
+        v = vector<T>();
+    }
+    void push(T value)
+    {
+        v.push_back(value);
+    }
+    T peek()
+    {
+        return v.back();
+    }
+    void pop()
+    {
+        v.pop_back();
+    }
+};
 
 int main()
 {
@@ -69,17 +92,112 @@ int main()
         }break;
         case 2:
         {
+            cout << "0 - new symbStr(value)\n1 - symbStr.getStr()\n2 - symbStr.setStr(value)\n3 - new octStr(value)\n4 - octStr.getStr()\n5 - octStr.setStr(value)\n\n9 - back\n";
+
+            bool f = false;
             SymbString newSS("symbstr");
-            cout << newSS.getStr() << "\n";
-            newSS.setStr("asasd");
-            cout << newSS.getStr() << "\n";
             OctString newOS("8");
-            cout << newOS.getStr() << "\n";
-            OctString newOS2("7");
-            cout << newOS2.getStr() << "\n";
-            OctString newSum = newOS + newOS2;
-            cout << newSum.getStr() << "\n";
+            while (1)
+            {
+                int i;
+                cin >> i;
+                switch (i)
+                {
+                case 0:
+                {
+                    string s;
+                    cin >> s;
+                    newSS = SymbString(s);
+                }
+                break;
+                case 1:
+                {
+                    cout << newSS.getStr() + "\n";
+                }
+                break;
+                case 2:
+                {
+                    string s;
+                    cin >> s;
+                    newSS.setStr(s);
+                }
+                break;
+                case 3:
+                {
+                    string s;
+                    cin >> s;
+                    newOS = OctString(s);
+                }
+                break;
+                case 4:
+                {
+                    cout << newOS.getStr() + "\n";
+                }
+                break;
+                case 5:
+                {
+                    string s;
+                    cin >> s;
+                    newOS.setStr(s);
+                }
+                break;
+                case 9:
+                {
+                    f = true;
+                }
+                break;
+                default:
+                    break;
+                }
+                if (f)
+                {
+                    break;
+                }
+            }
         }break;
+        case 3:
+        {
+            cout << "0 - push(value)\n1 - peek()\n2 - pop()\n\n9 - back\n";
+
+            bool f = false;
+            vStack<int> stack;
+            while (1)
+            {
+                int i;
+                cin >> i;
+                switch (i)
+                {
+                case 0:
+                {
+                    int value;
+                    cin >> value;
+                    stack.push(value);
+                }
+                break;
+                case 1:
+                {
+                    cout << stack.peek() << "\n";
+                }
+                break;
+                case 2:
+                {
+                    stack.pop();
+                }
+                break;
+                case 9:
+                {
+                    f = true;
+                }
+                break;
+                default:
+                    break;
+                }
+                if (f)
+                {
+                    break;
+                }
+            }
+        }
         default:
             cout << "Incorrect\n";
         }
